@@ -34,7 +34,7 @@ class _GameKeyboardState extends State<GameKeyboard> {
          children: row1.map((e){
               return InkWell(
                 onTap: (){
-                  print(e);
+
                   if(widget.game.letterId < 5){
                     setState(() {
                       widget.game.insetWord(widget.game.letterId, Letter(e,0));
@@ -65,7 +65,7 @@ class _GameKeyboardState extends State<GameKeyboard> {
          children: row2.map((e){
            return InkWell(
              onTap: (){
-               print(e);
+
                if(widget.game.letterId < 5){
                 setState(() {
                   widget.game.insetWord(widget.game.letterId, Letter(e,0));
@@ -95,7 +95,7 @@ class _GameKeyboardState extends State<GameKeyboard> {
          children: row3.map((e){
            return InkWell(
              onTap: (){
-               print(e);
+
 
                if(e == "DEL"){
                   if(widget.game.letterId > 0){
@@ -111,6 +111,7 @@ class _GameKeyboardState extends State<GameKeyboard> {
                        if(widget.game.checkWordExist(guess)){
                          if(guess==WordleGame.game_guess){
                            setState(() {
+
                              WordleGame.game_message = "You Won, Congrats!!";
                              widget.game.wordleBoard[widget.game.rowId].forEach((element) {
                                element.code = 1;
@@ -131,10 +132,12 @@ class _GameKeyboardState extends State<GameKeyboard> {
                                    widget.game.wordleBoard[widget.game.rowId][i].code=2;
                                  });
                                }
+                               WordleGame.game_message = "";
                              }
                            }
                            widget.game.rowId++;
                            widget.game.letterId =0;
+
                          }
 
                        }else

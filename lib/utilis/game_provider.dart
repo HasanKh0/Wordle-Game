@@ -5,7 +5,9 @@ class WordleGame{
   int letterId =0 ;
   static   String game_message = "";
   static   String game_guess = "";
-  static   List<String> word_list = ["WORLD","FIGHT","BRAIN","EARTH","ROBOT","PLANT","SIGHT","MAMBA","FREEZ",""];
+  static   List<String> word_list =
+  ["WORLD","FIGHT","BRAIN","PLANT","EARTH","READY","EAGLE","ANKLE","DRINK","FIELD","GIANT","DRIVE","GLASS", "ABOVE" ,
+    "ABUSE" , "ACTOR", "ADAPT" , "ADMIT" , "ADOBE"];
   static bool gameOver =false;
 
   static List<Letter> worldRow = List.generate(5, (index) => Letter("",0));
