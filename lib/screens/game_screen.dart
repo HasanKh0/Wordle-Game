@@ -18,6 +18,7 @@ class _GameScreenState extends State<GameScreen> {
   void initState() {
     // TODO: implement initState
     super.initState();
+    WordleGame.game_message = "";
     WordleGame.initGame();
   }
   @override
